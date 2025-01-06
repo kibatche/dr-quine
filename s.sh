@@ -1,0 +1,1 @@
+nasm -f elf64 -g t.S && gcc -nostartfiles -o test t.o -lc -no-pie && ./test
