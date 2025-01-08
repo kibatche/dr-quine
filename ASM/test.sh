@@ -1,0 +1,1 @@
+nasm -f elf64 Colleen.asm && gcc -nostartfiles -o Colleen Colleen.o -no-pie && ./Colleen > test && diff test Colleen.asm

@@ -1,2 +1,0 @@
-#include<stdio.h>
-/*comment1*/void dummy(){return;}int main(){/*comment2*/char *c="#include<stdio.h>%c/*comment1*/void dummy(){return;}int main(){/*comment2*/char *c=%c%s%c;dummy();printf(c,10,34,c,34);}";dummy();printf(c,10,34,c,34);}

@@ -1,0 +1,5 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main(){
+int i = 0;
+char n[10];char name[10];char c[1024];char *w="w";char *fmt="Sully_%d.c";char *fmtname="Sully_%d";char *fmtcom="bash -c 'gcc %s -o %s && ./%s'";snprintf(n, 10,fmt,__FILE__ == "Sully.c" ? i:--i);snprintf(name, 10,fmtname,i);snprintf(c, 1024,fmtcom,n,name,name);char *s="#include <stdlib.h>%c#include <stdio.h>%cint main(){%cint i = %d;%cchar n[10];char name[10];char c[1024];char *w=%c%s%c;char *fmt=%c%s%c;char *fmtname=%c%s%c;char *fmtcom=%c%s%c;snprintf(n, 10,fmt,__FILE__ == %cSully.c%c ? i:--i);snprintf(name, 10,fmtname,i);snprintf(c, 1024,fmtcom,n,name,name);char *s=%c%s%c;FILE *f = fopen(n, w);fprintf(f,s,10,10,10,i,10,34,w,34,34,fmt,34,34,fmtname,34,34,fmtcom,34,34,34,34,s,34);fclose(f);if ((i-1)<0){return 0;}system(c);}";FILE *f = fopen(n, w);fprintf(f,s,10,10,10,i,10,34,w,34,34,fmt,34,34,fmtname,34,34,fmtcom,34,34,34,34,s,34);fclose(f);if ((i-1)<0){return 0;}system(c);}

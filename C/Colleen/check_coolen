@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-./Colleen > colleen_res && diff Colleen.c colleen_res

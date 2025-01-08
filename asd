@@ -1,1 +1,0 @@
-%cmov rcx,10%cmov r8,10%cmov r9,10%cxor rax,rax%ccall printf%cmov rax,60%cxor rdi,rdi%csyscall%csection .data
