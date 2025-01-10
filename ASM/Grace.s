@@ -1,6 +1,6 @@
 ;sys_creat c'est comme open mais avec les flags O_CREAT | O_WRONLY | O_TRUNC
-    %define SYSCREAT 85
-    %define MODE 0644o
+%define SYSCREAT 85
+%define MODE 0644o
 section .rodata
 file db "Grace_kid.s"
 section .data

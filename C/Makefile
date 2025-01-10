@@ -1,5 +1,5 @@
-GCC = clang
-RM = rm -f
+CC = clang
+RM = rm -rf
 CCFLAGS = -Wall -Wextra -Werror
 SRCCOL = Colleen.c
 SRCGRA = Grace.c
@@ -14,18 +14,18 @@ NAMESUL = Sully
 all: ${NAMECOL} ${NAMEGRA} ${NAMESUL}
 
 ${NAMECOL}: ${OBJCOL}
-		${GCC} ${CCFLAGS} ${OBJCOL} -o ${NAMECOL}
+		${CC} ${CCFLAGS} ${OBJCOL} -o ${NAMECOL}
 ${NAMEGRA}: ${OBJGRA}
-		${GCC} ${CCFLAGS} ${OBJGRA} -o ${NAMEGRA}
+		${CC} ${CCFLAGS} ${OBJGRA} -o ${NAMEGRA}
 ${NAMESUL}: ${OBJSUL}
-		${GCC} ${CCFLAGS} ${OBJSUL} -o ${NAMESUL}
+		${CC} ${CCFLAGS} ${OBJSUL} -o ${NAMESUL}
 
-%.o: %.cpp
-		${GCC} ${CCFLAGS} -c $< -o $@
+%.o: %.c
+		${CC} ${CCFLAGS} -c $< -o $@
 clean:
 		${RM} ${OBJSUL} ${OBJCOL} ${OBJGRA}
 
 fclean: clean
-		${RM}  ${NAMECOL} ${NAMEGRA} ${NAMESUL} Sully_*
+		${RM}  ${NAMECOL} ${NAMEGRA} ${NAMESUL} Sully_* Grace_kid.* test
 
 re: fclean all
